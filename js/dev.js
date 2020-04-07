@@ -4,6 +4,7 @@ if (location.hostname === 'localhost') {
   var cleanup = function() {
     $('script[data-dapp-detection=""]').remove()
     $('script[src*="livereload.js"]').remove()
+    $('nav.is-fixed').removeClass('is-fixed')
   }
 
   var edit = () => {
