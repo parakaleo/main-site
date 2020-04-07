@@ -31,7 +31,7 @@ app.use('/save', function(req, res){
   res.end('ok')
 });
 
-app.get('/pretty', function(req, res){
+app.use('/pretty', function(req, res){
   glob("**/*.html", {
     ignore: [
       'node_modules/**',
@@ -43,7 +43,7 @@ app.get('/pretty', function(req, res){
       const html = fs.readFileSync(pathname, 'utf8')
       fs.writeFileSync(pathname, pretty(html, { ocd: true }))
     })
-    res.json({ files })
+    res.end(JSON.stringify({ files }, null, 2))
   })
 })
 
