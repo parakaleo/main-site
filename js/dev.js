@@ -1,4 +1,4 @@
-if (location.hostname === 'localhost') {
+if (location.hostname === 'localhost' || location.hostname.indexOf('ngrok') >= 0) {
   document.write('<script src="http://localhost:35729/livereload.js?snipver=1"></script>');
 
   var cleanup = function() {
