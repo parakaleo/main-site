@@ -5,6 +5,7 @@ var livereload = require('livereload');
 var path = require('path');
 var fs = require('fs');
 var pretty = require('pretty');
+const glob = require('glob')
 
 var app = connect();
 
@@ -29,6 +30,22 @@ app.use('/save', function(req, res){
   fs.writeFileSync(filepath, pretty(html, {ocd: true}))
   res.end('ok')
 });
+
+app.get('/pretty', function(req, res){
+  glob("**/*.html", {
+    ignore: [
+      'node_modules/**',
+      'www.parakaleo.org/**'
+    ]
+  }, function (er, files) {
+    files.forEach(file => {
+      const pathname = path.join(__dirname, file)
+      const html = fs.readFileSync(pathname, 'utf8')
+      fs.writeFileSync(pathname, pretty(html, { ocd: true }))
+    })
+    res.json({ files })
+  })
+})
 
 
 var lrserver = livereload.createServer();

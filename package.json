@@ -27,6 +27,7 @@
     "bootstrap": "^4.0.0-beta",
     "connect": "^3.6.1",
     "font-awesome": "4.7.0",
+    "glob": "^7.1.6",
     "jquery": "^3.2.1",
     "livereload": "^0.6.2",
     "popper.js": "1.12.3",
