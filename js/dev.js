@@ -1,8 +1,9 @@
 if (location.hostname === 'localhost') {
+  document.write('<script src="http://localhost:35729/livereload.js?snipver=1"></script>');
+
   var cleanup = function() {
-    $('.w-nav-overlay').remove()
-    $('link[rel="stylesheet"][href*=Inconsolata]').remove()
     $('script[data-dapp-detection=""]').remove()
+    $('script[src*="livereload.js"]').remove()
   }
 
   var edit = () => {
