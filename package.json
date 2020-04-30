@@ -28,7 +28,7 @@
     "connect": "^3.6.1",
     "font-awesome": "4.7.0",
     "glob": "^7.1.6",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "livereload": "^0.6.2",
     "popper.js": "1.12.3",
     "pretty": "^2.0.0",
