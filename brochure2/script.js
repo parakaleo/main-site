@@ -28,6 +28,9 @@ $(function() {
       marginTop: Math.max(h, dh)*.1 + 'px',
       perspective: w+h+'px'
     })
+    $('.inner-scene').css({
+      perspective: w+h+'px'
+    })
   }
 
   setDims()
