@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Flipping cards</title>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="/js/dev.js"></script>
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+  <body>
+    <div class="scene">
+      <div class="card unfold-left card-1">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back">
+          <div class="inner-scene">
+            <div class="card unfold-left card-3">
+              <div class="card__face card__face--front"></div>
+              <div class="card__face card__face--back"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card unfold-left card-2">
+        <div class="card__face card__face--front">
+          <div class="inner-scene">
+            <div class="card unfold-right card-4">
+              <div class="card__face card__face--front"></div>
+              <div class="card__face card__face--back"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card__face card__face--back"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
