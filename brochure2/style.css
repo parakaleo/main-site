@@ -73,35 +73,35 @@ body {
 }
 
 .card-1 > .card__face--front {
-  background-image: url('/img/brochure/1-1.jpg');
+  background-image: url('../img/brochure/1-1.jpg');
 }
 
 .card-1 > .card__face--back {
-  background-image: url('/img/brochure/3-2.jpg');
+  background-image: url('../img/brochure/3-2.jpg');
 }
 
 .card-2 > .card__face--front {
-  background-image: url('/img/brochure/3-3.jpg');
+  background-image: url('../img/brochure/3-3.jpg');
 }
 
 .card-2 > .card__face--back {
-  background-image: url('/img/brochure/4-1.jpg');
+  background-image: url('../img/brochure/4-1.jpg');
 }
 
 .card-3 > .card__face--front {
-  background-image: url('/img/brochure/2-1.jpg');
+  background-image: url('../img/brochure/2-1.jpg');
 }
 
 .card-3 > .card__face--back {
-  background-image: url('/img/brochure/3-1.jpg');
+  background-image: url('../img/brochure/3-1.jpg');
 }
 
 .card-4 > .card__face--front {
-  background-image: url('/img/brochure/2-2.jpg');
+  background-image: url('../img/brochure/2-2.jpg');
 }
 
 .card-4 > .card__face--back {
-  background-image: url('/img/brochure/3-4.jpg');
+  background-image: url('../img/brochure/3-4.jpg');
 }
 
 img.preload {
