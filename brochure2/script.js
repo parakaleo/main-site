@@ -26,10 +26,10 @@ $(function() {
       width: w*.8 + 'px',
       marginLeft: Math.max(w, dw)*.1 + w*.8*2 + 'px',
       marginTop: Math.max(h, dh)*.1 + 'px',
-      perspective: w+h+'px'
+      perspective: 2*w+h+'px'
     })
     $('.inner-scene').css({
-      perspective: w+h+'px'
+      perspective: 2*w+h+'px'
     })
   }
 
