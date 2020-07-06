@@ -13,14 +13,17 @@ $(function() {
     var dh = $(document).height()
     var dw = $(document).width()
     var h, w
-    if (dh*16/9 <= dw) {
+    if (dh/dw <= 9/16) {
+      // height limits
       h = dh
-      w = dh*4/9
+      w = dh*16/9
     }
     else {
-      h = dw*9/4
+      // width limits
+      h = dw*9/16
       w = dw
     }
+    w /= 4
     $('.scene').css({
       height: h*.8 + 'px',
       width: w*.8 + 'px',
