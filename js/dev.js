@@ -1,7 +1,29 @@
 if (location.hostname === 'localhost' || location.hostname.indexOf('ngrok') >= 0) {
-  document.write('<script src="http://localhost:35729/livereload.js?snipver=1"></script>');
+  // var s = document.createElement('script')
+  // s.src = "http://localhost:35729/livereload.js?snipver=1"
+  // document.head.appendChild(s);
+
+
+  var showSpecials = () => {
+    var style = document.createElement('style')
+    style.innerText = '.macro { background-color: orange; opacity: 0.7; }'
+    style.id = 'edit-mode-show-specials'
+    document.body.appendChild(style)
+  }
+  var edit = () => {
+    showSpecials()
+    document.body.contentEditable = true
+    window.onbeforeunload = function (e) {
+      e = e || window.event;
+      var msg = 'unsaved changes'
+      if (e) { e.returnValue = msg; }
+      return msg;
+    };
+  }
 
   var cleanup = function() {
+    $('#edit-mode-show-specials').remove()
+
     // handle brave
     $('script[data-dapp-detection=""]').remove()
 
@@ -15,16 +37,6 @@ if (location.hostname === 'localhost' || location.hostname.indexOf('ngrok') >= 0
     $('a[data-toggle="tab"]').removeClass('active').removeAttr('aria-expanded')
     $('div.tab-pane.fade').removeClass('active show').removeAttr('aria-expanded')
     $('div.tab-pane.fade').first().addClass('active show')
-  }
-
-  var edit = () => {
-    document.body.contentEditable = true
-    window.onbeforeunload = function (e) {
-      e = e || window.event;
-      var msg = 'unsaved changes'
-      if (e) { e.returnValue = msg; }
-      return msg;
-    };
   }
 
 
