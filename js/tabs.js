@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('<style>'+
+  $('<style class="tab-styles">'+
     'a.active[data-toggle="tab"] {'+
     '  background-color: #f0f8ff;'+
     '}'+

@@ -23,6 +23,7 @@ if (location.hostname === 'localhost' || location.hostname.indexOf('ngrok') >= 0
 
   var cleanup = function() {
     $('#edit-mode-show-specials').remove()
+    $('style.tab-styles').remove()
 
     // handle brave
     $('script[data-dapp-detection=""]').remove()
