@@ -24,7 +24,11 @@ $(document).ready(function() {
   /*if(!location.hash) {
     location.hash = $('a[data-toggle="tab"]').attr('href').substr(1)
   }*/
-  return $('a[data-toggle="tab"]').on('click', function(e) {
+  $(window).on('hashchange', function(e) {
+    $('a[data-toggle="tab"][href="' + location.hash + '"]').click()
+  });
+
+  $('a[data-toggle="tab"]').on('click', function(e) {
     location.hash = $(e.target).closest('a').attr('href').substr(1);
   });
 });
