@@ -17,23 +17,18 @@ $(document).ready(function() {
     '}'+
     '</style>').appendTo('head')
 
-  /*if(!location.hash) {
-    location.hash = $('a[data-toggle="tab"]').attr('href').substr(1)
-  }*/
+
+  if (location.hash !== '') {
+    $('a[data-toggle="tab"]').removeClass('active');
+    $('a[data-toggle="tab"][href="' + location.hash + '"]').tab('show').addClass('active');
+  }
+
   $(window).on('hashchange', function(e) {
-    $('a[data-toggle="tab"][href="' + location.hash + '"]').click()
+    $('a[data-toggle="tab"][href="' + location.hash + '"]').tab('show')
   });
 
   $('a[data-toggle="tab"]').on('click', function(e) {
     location.hash = $(e.target).closest('a').attr('href').substr(1);
-    $(e.target).tab('show')
   });
-
-  if (location.hash !== '') {
-    $('a[data-toggle="tab"]').removeClass('active');
-    // $('a[data-toggle="tab"][href="' + location.hash + '"]').tab('show').addClass('active');
-    var $tab = $('a[data-toggle="tab"][href="' + location.hash + '"]').addClass('active');
-    $tab.find('li').click()
-  }
 
 });
